@@ -7,7 +7,7 @@ Steps to build & run project:
 5. Run the run file & cmd is "java -jar atm-0.0.1-SNAPSHOT.jar"
 6. SpringBoot application will be app and running.
 
-Test the APIS:
+Test the APIS::
 1. Open the browser
 2. To get list of atms, hit the below url : http://localhost:8080/api/atms/
 3. To filter of atms by city, hit the below url : http://localhost:8080/api/atms/{cityName}
