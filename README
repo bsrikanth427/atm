@@ -1,0 +1,14 @@
+Steps to build & run project:
+
+1. Go to root project root directory i,e. "atm".
+2. Make sure maven and JDK 8 or higher version installed in the system.
+3. Execute the maven command in root directory "mvn clean package".
+4. Jar atm-0.0.1-SNAPSHOT.jar will be created in target folder.
+5. Run the run file & cmd is "java -jar atm-0.0.1-SNAPSHOT.jar"
+6. SpringBoot application will be app and running.
+
+Test the APIS:
+1. Open the browser
+2. To get list of atms, hit the below url : http://localhost:8080/api/atms/
+3. To filter of atms by city, hit the below url : http://localhost:8080/api/atms/{cityName}
+
