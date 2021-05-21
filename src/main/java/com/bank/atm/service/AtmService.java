@@ -1,6 +1,6 @@
 package com.bank.atm.service;
 
-import java.util.List;import java.util.stream.Collector;
+import java.util.List;
 import java.util.stream.Collectors;
 
 import javax.annotation.PostConstruct;
