@@ -18,4 +18,9 @@ Docker Build:
 2. docker-compose -f docker/docker-compose.yml build --no-cache
 3. docker-compose -f docker/docker-compose.yml up -d
 
-
+K8s:
+1. kubectl appy -f atm-deployment.yml
+2. kubectl get pod
+3. kubectl get svc
+4. minikube service atm-app-service
+5. http://<External-IP>/<port>/atm/api/atms
