@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  atm-app-container:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    image: atm-app-image
+    expose: 
+      - 9090
+    ports:
+      - 8081:9090

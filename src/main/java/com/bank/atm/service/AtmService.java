@@ -8,6 +8,7 @@ import javax.annotation.PostConstruct;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
@@ -30,9 +31,11 @@ public class AtmService {
 	
 	private List<AtmDto> atms = null;
 	
+	@Value("${atm.base.url}")
+	private String url;
+	
 	@PostConstruct
 	public void init() throws JsonMappingException, JsonProcessingException {
-		String url = env.getProperty("atm.base.url");
 		log.info("Collecting atms from base endpoint: {} ", url);
 		ResponseEntity<String> responseEntity = restTemplate.exchange(url,HttpMethod.GET,null,String.class);
 		log.info("status: {}", responseEntity.getStatusCodeValue());

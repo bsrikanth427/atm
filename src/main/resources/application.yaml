@@ -1,0 +1,9 @@
+atm:
+  base:
+    url: https://www.ing.nl/api/locator/atms/
+    
+server:
+  port: 9090
+  servlet:
+    contextPath: /atm
+ 

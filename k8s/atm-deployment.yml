@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: atm-app
+spec:
+  selector:
+    matchLabels:
+      app: atm-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: atm-app
+    spec:
+      containers:
+      - name: atm-app-image
+        image: bsrikanth427/atm-app-image:v1
+        ports:
+        - containerPort: 9090
+     
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: atm-app-service
+spec:
+  selector:
+    app: atm-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9090
+  type: LoadBalancer 
